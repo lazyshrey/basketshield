@@ -1171,8 +1171,30 @@ else:
        $$\sum_{s \in S} R_s \cdot x_s \ge R_{\text{target}} \cdot D_{\text{total}}$$
     4. **Weighted Lead-Time SLA Ceiling:**
        $$\sum_{s \in S} \text{LeadTime}_s \cdot x_s \le \text{MaxLeadTime} \cdot D_{\text{total}}$$
-    """)
     st.info("Solver: Google OR-Tools (SCIP Backend). Evaluated deterministically in <15ms with verifiable optimality.")
+
+    st.markdown("""
+    <div style="background-color: #121215; border: 1px solid #27272a; border-radius: 8px; padding: 14px 18px; margin-top: 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div>
+            <span style="font-size: 0.72rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block;">Principal Research Dossier</span>
+            <span style="font-size: 0.95rem; font-weight: 600; color: #fafafa;">BasketShield AI: Multi-Sector Supply Chain Resilience &amp; Consumer Price Defense</span>
+            <span style="font-size: 0.8rem; color: #a1a1aa; display: block; margin-top: 2px;">Authored by <b>Shrey Jaiswal</b> (Lead Architect &amp; Researcher)</span>
+        </div>
+        <span class="badge-pill" style="color: #38bdf8; border-color: #0369a1; background: #0c1929; font-weight: 600;">PEER-AUDITED SPECIFICATION</span>
+    </div>
+    """, unsafe_allow_html=True)
+
+    paper_path = os.path.join(os.path.dirname(__file__), "docs", "BasketShield_AI_Research_Paper.pdf")
+    if os.path.exists(paper_path):
+        with open(paper_path, "rb") as f:
+            pdf_bytes = f.read()
+        st.download_button(
+            label="📄 Download Official Research Paper (PDF) — By Shrey Jaiswal",
+            data=pdf_bytes,
+            file_name="BasketShield_AI_Research_Paper_Shrey_Jaiswal.pdf",
+            mime="application/pdf",
+            use_container_width=True
+        )
 
 st.markdown("---")
 st.markdown("<p style='font-size: 0.74rem; color: #52525b; text-align: center;'>BasketShield AI | Open-Source Multi-Sector Supply Chain Resilience Prototype | Built with Python, Google OR-Tools, Gemini AI &amp; Streamlit</p>", unsafe_allow_html=True)
