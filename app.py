@@ -1171,6 +1171,8 @@ else:
        $$\sum_{s \in S} R_s \cdot x_s \ge R_{\text{target}} \cdot D_{\text{total}}$$
     4. **Weighted Lead-Time SLA Ceiling:**
        $$\sum_{s \in S} \text{LeadTime}_s \cdot x_s \le \text{MaxLeadTime} \cdot D_{\text{total}}$$
+    """)
+
     st.info("Solver: Google OR-Tools (SCIP Backend). Evaluated deterministically in <15ms with verifiable optimality.")
 
     st.markdown("""
