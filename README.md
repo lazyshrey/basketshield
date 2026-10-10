@@ -4,7 +4,10 @@
 *Lead Architect & Researcher — BasketShield AI Research Group*  
 **Hackathon Track:** AI for Resilient and Sustainable Supply Chains  
 **License:** MIT License  
-**Academic Research Paper:** 📄 [Download PDF](docs/BasketShield_AI_Research_Paper.pdf) &nbsp;|&nbsp; 📖 [Read Online (Markdown)](docs/RESEARCH_PAPER.md)
+**Academic Research Paper:** 📄 [Download PDF](docs/BasketShield_AI_Research_Paper.pdf) &nbsp;|&nbsp; 📖 [Read Online (Markdown)](docs/RESEARCH_PAPER.md)  
+**Interface Screenshots & Walkthrough:** 📸 [View Screenshots Dossier](screenshots.md)
+
+![BasketShield AI Resilience Cockpit](screenshots/01_resilience_cockpit_home.png)
 
 ---
 
