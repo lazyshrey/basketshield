@@ -472,38 +472,24 @@ if nav_page == "🛡️ Resilience Cockpit (Home)":
     cat_display = matched_catalog_row.get("category", decomp.product_category) if matched_catalog_row else decomp.product_category
 
     is_electronics = (matched_catalog_row and matched_catalog_row.get("sector") == "Consumer Electronics & Computing") or any(k in str(package_type).upper() for k in ["SMARTPHONE", "GPU", "LAPTOP", "CONSOLE"])
-    ai_memory_badge_html = """
-        <div style="border-left: 1px solid #27272a; padding-left: 14px;">
-            <span style="font-size: 0.70rem; color: #f472b6; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">AI Memory Shock Exposure</span>
-            <span class="badge-pill" style="font-size: 0.76rem; font-weight: 700; color: #f472b6; border-color: #db2777; background: #2a081a;">🧠 HBM3e / DRAM CRUNCH (+58%)</span>
-        </div>
-    """ if is_electronics else ""
+    ai_memory_badge_html = (
+        '<div style="border-left: 1px solid #27272a; padding-left: 14px;">'
+        '<span style="font-size: 0.70rem; color: #f472b6; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">AI Memory Shock Exposure</span>'
+        '<span class="badge-pill" style="font-size: 0.76rem; font-weight: 700; color: #f472b6; border-color: #db2777; background: #2a081a;">🧠 HBM3e / DRAM CRUNCH (+58%)</span>'
+        '</div>'
+    ) if is_electronics else ""
 
-    st.markdown(f"""
-    <div style="background-color: #121215; border: 1px solid #27272a; border-radius: 8px; padding: 12px 18px; margin-top: 10px; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
-        <div>
-            <span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Selected Product</span>
-            <span style="font-size: 0.96rem; font-weight: 600; color: #fafafa;">{decomp.product_name}</span>
-        </div>
-        <div style="border-left: 1px solid #27272a; padding-left: 14px;">
-            <span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Package / Form Factor</span>
-            <span class="badge-pill" style="font-size: 0.84rem; font-weight: 700; color: #38bdf8; border-color: #0369a1; background: #0c1929; padding: 3px 10px;">📦 {package_type}</span>
-        </div>
-        <div style="border-left: 1px solid #27272a; padding-left: 14px;">
-            <span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Category</span>
-            <span style="font-size: 0.85rem; color: #e4e4e7; font-weight: 500;">{cat_display}</span>
-        </div>
-        <div style="border-left: 1px solid #27272a; padding-left: 14px;">
-            <span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Material Specification</span>
-            <span style="font-size: 0.85rem; color: #a1a1aa;">{pkg_spec_display}</span>
-        </div>
-        <div style="border-left: 1px solid #27272a; padding-left: 14px;">
-            <span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Primary Chokepoint</span>
-            <span class="badge-crit" style="font-size: 0.75rem;">{choke_display}</span>
-        </div>
-        {ai_memory_badge_html}
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        f'<div style="background-color: #121215; border: 1px solid #27272a; border-radius: 8px; padding: 12px 18px; margin-top: 10px; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">'
+        f'<div><span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Selected Product</span><span style="font-size: 0.96rem; font-weight: 600; color: #fafafa;">{decomp.product_name}</span></div>'
+        f'<div style="border-left: 1px solid #27272a; padding-left: 14px;"><span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Package / Form Factor</span><span class="badge-pill" style="font-size: 0.84rem; font-weight: 700; color: #38bdf8; border-color: #0369a1; background: #0c1929; padding: 3px 10px;">📦 {package_type}</span></div>'
+        f'<div style="border-left: 1px solid #27272a; padding-left: 14px;"><span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Category</span><span style="font-size: 0.85rem; color: #e4e4e7; font-weight: 500;">{cat_display}</span></div>'
+        f'<div style="border-left: 1px solid #27272a; padding-left: 14px;"><span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Material Specification</span><span style="font-size: 0.85rem; color: #a1a1aa;">{pkg_spec_display}</span></div>'
+        f'<div style="border-left: 1px solid #27272a; padding-left: 14px;"><span style="font-size: 0.70rem; color: #71717a; text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 0.05em;">Primary Chokepoint</span><span class="badge-crit" style="font-size: 0.75rem;">{choke_display}</span></div>'
+        f'{ai_memory_badge_html}'
+        f'</div>',
+        unsafe_allow_html=True
+    )
 
     # Live Multi-Tier Product Intelligence Drawer
     drawer_title = f"📦 {decomp.product_name} — Package Type: {package_type} ({cat_display})"
