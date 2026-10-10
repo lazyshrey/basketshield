@@ -1,0 +1,64 @@
+{
+  "DIET_COKE_330ML": {
+    "name": "Diet Sparkling Soda (330ml Can)",
+    "retail_target_price": 1.5,
+    "benchmark_wholesale_price": 0.85,
+    "batch_size_units": 100000,
+    "bom_components": {
+      "can_body_3104": {
+        "material": "AA 3104 Aluminum Alloy Sheet",
+        "mass_grams": 11.5,
+        "target_spec": "Drawn & Ironed Body Stock",
+        "min_recycled_content": 0.6,
+        "max_recycled_content": 0.9
+      },
+      "can_end_tab_5182": {
+        "material": "AA 5182 Aluminum Alloy Coil",
+        "mass_grams": 1.5,
+        "target_spec": "High-Magnesium Stay-on-Tab End",
+        "min_recycled_content": 0.3,
+        "max_recycled_content": 0.6
+      },
+      "liquid_concentrate": {
+        "material": "Carbonated Water + Aspartame/Acidulant Blend",
+        "mass_grams": 330.0,
+        "base_cost_per_unit": 0.085
+      },
+      "co2_carbonation": {
+        "material": "Food-grade CO2",
+        "base_cost_per_unit": 0.012
+      }
+    }
+  },
+  "COLD_BREW_COFFEE_250ML": {
+    "name": "Single-Origin Nitro Cold Brew (250ml Can)",
+    "retail_target_price": 2.95,
+    "benchmark_wholesale_price": 1.65,
+    "batch_size_units": 50000,
+    "bom_components": {
+      "can_body_3104": {
+        "material": "AA 3104 Slim Can Body",
+        "mass_grams": 10.2,
+        "target_spec": "Slim 250ml D&I Body Stock",
+        "min_recycled_content": 0.6,
+        "max_recycled_content": 0.9
+      },
+      "can_end_tab_5182": {
+        "material": "AA 5182 End/Tab",
+        "mass_grams": 1.3,
+        "target_spec": "200 Dia End",
+        "min_recycled_content": 0.3,
+        "max_recycled_content": 0.6
+      },
+      "liquid_concentrate": {
+        "material": "Cold Brewed Arabica Extract",
+        "mass_grams": 250.0,
+        "base_cost_per_unit": 0.32
+      },
+      "nitrogen_charge": {
+        "material": "Nitrogen Dosing",
+        "base_cost_per_unit": 0.025
+      }
+    }
+  }
+}

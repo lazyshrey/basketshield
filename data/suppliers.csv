@@ -1,0 +1,5 @@
+id,name,location,base_conversion_cost_usd,primary_metal_exposure,certified_recycled_content,transport_mode,baseline_lead_time_days,cape_detour_applicable,capacity_units,moq_units,contract_activation_fee_usd,section_232_tariff_applies
+SUP_GULF_OVERSEAS,Al-Bahrani Global Packaging (Gulf Smelter Dependent),Bahrain / UAE,0.052,0.85,0.25,Ocean (Hormuz/Suez or Cape Detour),16,True,150000,35000,1200.0,True
+SUP_DOMESTIC_CIRCULAR,Aegis Circular Can-Makers (Novelis High-Recycled Sheet),Domestic / Nearshore (Regional Mill),0.068,0.15,0.82,Domestic Rail / Freight,7,False,85000,20000,800.0,False
+SUP_EURO_HYBRID,Danube Metal Containers (European Rolling Mill),Central Europe,0.062,0.45,0.65,Short-sea / Intermodal,12,False,60000,15000,650.0,False
+SUP_EMERGENCY_BUFFER,Apex Quick-Response Packaging Stockist,Local Distribution Hub,0.085,0.3,0.7,Dedicated Truckload,3,False,30000,5000,300.0,False

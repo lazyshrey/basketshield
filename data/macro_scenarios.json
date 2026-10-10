@@ -1,0 +1,46 @@
+{
+  "baseline": {
+    "name": "Pre-Crisis Equilibrium",
+    "lme_aluminum_usd_per_tonne": 2400.0,
+    "us_midwest_premium_usd_per_tonne": 420.0,
+    "section_232_tariff_pct": 0.0,
+    "ocean_container_feu_usd": 2050.0,
+    "cape_detour_days": 0,
+    "gulf_smelter_capacity_loss_pct": 0.0,
+    "ai_memory_surge_pct": 0.0,
+    "description": "Standard trade flows via Suez Canal. Full Gulf primary smelting and balanced DRAM wafer allocation operational."
+  },
+  "moderate_shock": {
+    "name": "Hormuz Transit Alert & Cape Diversion",
+    "lme_aluminum_usd_per_tonne": 2950.0,
+    "us_midwest_premium_usd_per_tonne": 650.0,
+    "section_232_tariff_pct": 10.0,
+    "ocean_container_feu_usd": 3800.0,
+    "cape_detour_days": 10,
+    "gulf_smelter_capacity_loss_pct": 3.0,
+    "ai_memory_surge_pct": 28.0,
+    "description": "Commercial shipping begins diverting around Africa; maritime insurance surcharges rise, initial AI wafer crowding emerges."
+  },
+  "acute_2026_shock": {
+    "name": "2026 Acute Middle East Chokepoint Crisis",
+    "lme_aluminum_usd_per_tonne": 3600.0,
+    "us_midwest_premium_usd_per_tonne": 1150.0,
+    "section_232_tariff_pct": 25.0,
+    "ocean_container_feu_usd": 5900.0,
+    "cape_detour_days": 14,
+    "gulf_smelter_capacity_loss_pct": 8.0,
+    "ai_memory_surge_pct": 58.0,
+    "description": "Gulf primary smelters hit; Strait of Hormuz blocked; full Cape detour on Asian/Middle East packaging and global silicon."
+  },
+  "ai_datacenter_memory_supercycle": {
+    "name": "AI Supercycle & Memory Squeeze (HBM3e/DRAM Wafer Crunch)",
+    "lme_aluminum_usd_per_tonne": 3200.0,
+    "us_midwest_premium_usd_per_tonne": 850.0,
+    "section_232_tariff_pct": 20.0,
+    "ocean_container_feu_usd": 4800.0,
+    "cape_detour_days": 12,
+    "gulf_smelter_capacity_loss_pct": 5.0,
+    "ai_memory_surge_pct": 72.0,
+    "description": "Hyperscaler AI cluster demand consumes 85%+ of SK Hynix, Samsung, and Micron wafer allocation for HBM3e, creating a +72% surge in consumer DRAM/NAND spot prices."
+  }
+}
